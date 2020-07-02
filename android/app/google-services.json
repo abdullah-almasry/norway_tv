@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "919001247641",
+    "firebase_url": "https://norwaytv-d6000.firebaseio.com",
+    "project_id": "norwaytv-d6000",
+    "storage_bucket": "norwaytv-d6000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919001247641:android:264429c551a8c2533b2d08",
+        "android_client_info": {
+          "package_name": "com.norway.tv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919001247641-hni3ljsmfsla2e65ltu6f2eltdr6dbdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.norway.tv",
+            "certificate_hash": "f563088698bab5819ef75912bc35f369f38e9162"
+          }
+        },
+        {
+          "client_id": "919001247641-4q0aokp27gskboqdlc7cdh2ffol6k8qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOcjd8qc-2Kj0agoxQvXhmjz86_u_iTjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919001247641-4q0aokp27gskboqdlc7cdh2ffol6k8qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
