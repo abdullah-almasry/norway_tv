@@ -21,7 +21,6 @@ class _MyAppState extends State<FaceBook> {
         children: [
           Center(
             child: AwsomeVideoPlayer(
-
               ModalRoute.of(context).settings.arguments,
               playOptions: VideoPlayOptions(
                   seekSeconds: 30,

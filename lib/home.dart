@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
   void initState() {
     print('initState called.');
     super.initState();
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 3; i++) {
       FocusNode focus = FocusNode();
       focusNodes.add(focus);
     }
@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
   @override
   void dispose() {
     print('dispose called.');
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 3; i++) {
       focusNodes[i].dispose();
     }
     super.dispose();
@@ -86,18 +86,10 @@ class _HomeState extends State<Home> {
 
                           // Navigator.pushNamed(context, FaceBook.route, arguments: videoUrl);
                           break;
-                        case KEY_UP:
-                          FocusScope.of(context).requestFocus(focusNodes[6]);
-                          break;
-                        case KEY_DOWN:
-                          FocusScope.of(context).requestFocus(focusNodes[3]);
-                          break;
                         case KEY_LEFT:
-                          FocusScope.of(context).requestFocus(focusNodes[2]);
-                          break;
-                        case KEY_RIGHT:
                           FocusScope.of(context).requestFocus(focusNodes[1]);
                           break;
+
                         default:
                           break;
                       }
@@ -117,7 +109,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              new Container(
+               Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(5.0),
                 child: new RawKeyboardListener(
@@ -131,19 +123,13 @@ class _HomeState extends State<Home> {
                       print("Focus Node 1 ${rawKeyEventDataAndroid.keyCode}");
                       switch (rawKeyEventDataAndroid.keyCode) {
                         case KEY_CENTER:
-                          Navigator.of(context).pushNamed('/facebook',);
-                          break;
-                        case KEY_UP:
-                          FocusScope.of(context).requestFocus(focusNodes[7]);
-                          break;
-                        case KEY_DOWN:
-                          FocusScope.of(context).requestFocus(focusNodes[4]);
+                          logic.playFaceBookVideo();
                           break;
                         case KEY_LEFT:
-                          FocusScope.of(context).requestFocus(focusNodes[0]);
+                          FocusScope.of(context).requestFocus(focusNodes[2]);
                           break;
                         case KEY_RIGHT:
-                          FocusScope.of(context).requestFocus(focusNodes[2]);
+                          FocusScope.of(context).requestFocus(focusNodes[0]);
                           break;
                         default:
                           break;
@@ -175,6 +161,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(5.0),
                 child: new RawKeyboardListener(
+
                   focusNode: focusNodes[2],
                   onKey: (RawKeyEvent event) {
                     if (event is RawKeyDownEvent &&
@@ -185,19 +172,14 @@ class _HomeState extends State<Home> {
                       print("Focus Node 2 ${rawKeyEventDataAndroid.keyCode}");
                       switch (rawKeyEventDataAndroid.keyCode) {
                         case KEY_CENTER:
-                          Navigator.of(context).pushNamed('/youtube');
+                            logic.playYoutubeVideo();
                           break;
-                        case KEY_UP:
-                          FocusScope.of(context).requestFocus(focusNodes[8]);
-                          break;
-                        case KEY_DOWN:
-                          FocusScope.of(context).requestFocus(focusNodes[5]);
-                          break;
+
                         case KEY_LEFT:
-                          FocusScope.of(context).requestFocus(focusNodes[1]);
+                          FocusScope.of(context).requestFocus(focusNodes[0]);
                           break;
                         case KEY_RIGHT:
-                          FocusScope.of(context).requestFocus(focusNodes[0]);
+                          FocusScope.of(context).requestFocus(focusNodes[1]);
                           break;
                         default:
                           break;
